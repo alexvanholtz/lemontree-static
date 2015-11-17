@@ -1,0 +1,61 @@
+footer {
+  margin: 60px 0 25px 0;
+  text-align: center;
+  position: relative;
+}
+
+.logo-footer {
+  width: 44%;
+}
+
+.social-links {
+  list-style-type: none;
+  margin-top: 40px;
+  padding-left: 0;
+
+  li {
+    display: inline-block;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+}
+
+// .footer-bottom {
+//   float: left;
+// }
+
+.copyright {
+  @include font-size(1.1);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.footer-logos {
+  width: 179px;
+  height: 41px;
+  margin-top: 90px;
+}
+
+.icon {
+  width: 32px;
+  height: 31px;
+  display: block;
+}
+
+
+.icon-facebook {
+  background-image: url(../img/svg/icons/facebook.svg);
+}
+
+.icon-instagram {
+  width: 30px;  
+  background-image: url(../img/svg/icons/instagram.svg);
+}
+
+.icon-vimeo {
+  background-image: url(../img/svg/icons/vimeo.svg);
+}

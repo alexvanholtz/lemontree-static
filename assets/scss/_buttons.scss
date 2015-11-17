@@ -2,11 +2,18 @@
   display: inline-block;
   background-color: $yellow-secondary;
   border: 2px solid $yellow-secondary;  
-  padding: 1.5rem 5rem;
+  padding: 15px 60px;
   border-radius: 8px;
   text-transform: uppercase;
   text-decoration: none;
   color: $gray-dark;
+  letter-spacing: 1px;
+  transition: 0.2s all;
+
+  &:hover {
+    background-color: transparent;
+    border-color: $gray-dark;
+  }
 }
 
 .btn--outlined {
@@ -14,5 +21,14 @@
   background: transparent;
   @include font-size(1.6);  
   letter-spacing: 2px;
-  padding: 1.5rem 3rem;
+  padding: 15px 30px;
+
+  &:hover {
+    border-color: $yellow-secondary;
+    background-color: $yellow-secondary;
+
+
+
+  }  
 }
+

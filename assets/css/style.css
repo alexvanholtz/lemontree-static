@@ -25,7 +25,8 @@ img {
 
 .container {
   width: 1024px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  clear: both; }
 
 h1, .h1 {
   font-size: 46px;
@@ -41,6 +42,50 @@ h2, .h2 {
   text-transform: uppercase;
   padding: 30px 0; }
 
+h3, .h3 {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10px 0; }
+
+h4, .h4 {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 1.5px; }
+
+hr.small {
+  width: 20%;
+  margin-bottom: 20px;
+  border-bottom: none;
+  border-top: 1px solid #979797; }
+
+p, a {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 24px; }
+
+a {
+  color: #707070; }
+
+.link-arrow {
+  font-size: 13.55px;
+  font-size: 1.355rem;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none; }
+  .link-arrow:after {
+    content: url(../img/svg/arrow.svg);
+    margin-left: 10px;
+    transition: all 0.2s ease-in-out; }
+  .link-arrow:hover:after {
+    margin-left: 15px; }
+
 .pull-right {
   float: right; }
 
@@ -51,11 +96,16 @@ h2, .h2 {
   display: inline-block;
   background-color: #FEDE59;
   border: 2px solid #FEDE59;
-  padding: 1.5rem 5rem;
+  padding: 15px 60px;
   border-radius: 8px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #707070; }
+  color: #707070;
+  letter-spacing: 1px;
+  transition: 0.2s all; }
+  .btn:hover {
+    background-color: transparent;
+    border-color: #707070; }
 
 .btn--outlined {
   border: 2px solid #707070;
@@ -63,7 +113,47 @@ h2, .h2 {
   font-size: 16px;
   font-size: 1.6rem;
   letter-spacing: 2px;
-  padding: 1.5rem 3rem; }
+  padding: 15px 30px; }
+  .btn--outlined:hover {
+    border-color: #FEDE59;
+    background-color: #FEDE59; }
+
+.contact-form {
+  margin: 60px auto; }
+  .contact-form h3 {
+    letter-spacing: 3.33px;
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 20px; }
+
+form {
+  width: 65%;
+  margin: 0 auto;
+  text-align: center; }
+
+input[type='text'], input[type='email'] {
+  width: 48%;
+  border-radius: 4px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  float: left;
+  text-transform: uppercase;
+  color: #707070; }
+
+input[type='name'] {
+  float: left; }
+
+input[type='email'] {
+  float: right; }
+
+textarea {
+  width: 100%;
+  text-transform: uppercase;
+  color: #707070;
+  margin: 30px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 15px; }
 
 .header {
   height: 120px;
@@ -144,15 +234,26 @@ h2, .h2 {
 .main-nav__trigger:hover::after {
   color: #000; }
 
-section {
+.hero {
+  max-height: 683px;
+  width: 100%;
+  height: 683px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+
+/*------------------------------------*\
+    COMMUNITIES PAGE
+\*------------------------------------*/
+.communities {
   background-image: url("../img/svg/leaves-colored.svg");
   background-repeat: no-repeat;
   background-position: top center;
   min-height: 1000px;
   margin-top: 60px; }
-  section h1 {
+  .communities h1 {
     text-align: center; }
-  section .section-description {
+  .communities .communities-description {
     max-width: 735px;
     margin: 0 auto 90px auto;
     text-align: center;
@@ -193,5 +294,116 @@ section {
 .community-small:nth-child(2) {
   float: right;
   margin-top: 180px; }
+
+/*------------------------------------*\
+    COMMUNITY PAGE
+\*------------------------------------*/
+.community {
+  position: relative;
+  background-color: #F9E35F; }
+  .community .container {
+    position: relative; }
+  .community h1 {
+    color: #fff;
+    text-align: center;
+    font-weight: normal;
+    padding-top: 130px; }
+  .community .community-sidebar {
+    width: 24%;
+    position: relative;
+    background-color: #F9E35F;
+    background-image: url(../img/svg/leaves-branch.svg);
+    height: 550px;
+    background-position: 250% 300%;
+    background-repeat: no-repeat;
+    text-align: center; }
+  .community .community-description {
+    background-color: #fff;
+    width: 76%;
+    padding: 40px 70px 50px 50px;
+    position: absolute;
+    top: -375px;
+    right: 0; }
+  .community .community-additional-links {
+    margin-top: 50px; }
+  .community .community-neighborhoods {
+    background-color: #F2F2F2;
+    padding: 30px 0; }
+    .community .community-neighborhoods h3 {
+      text-align: center; }
+    .community .community-neighborhoods ul {
+      font-weight: bold;
+      list-style: none;
+      margin-top: 30px;
+      -webkit-column-count: 3;
+      /* Chrome, Safari, Opera */
+      -moz-column-count: 3;
+      /* Firefox */
+      column-count: 3;
+      -webkit-column-gap: 40px;
+      /* Chrome, Safari, Opera */
+      -moz-column-gap: 40px;
+      /* Firefox */
+      column-gap: 40px; }
+      .community .community-neighborhoods ul li {
+        margin-bottom: 10px; }
+        .community .community-neighborhoods ul li a {
+          font-size: 14px;
+          font-size: 1.4rem;
+          text-decoration: none; }
+
+.statistics {
+  padding-top: 60px; }
+  .statistics .statistic {
+    padding-bottom: 50px; }
+    .statistics .statistic h4 {
+      margin: 10px 0; }
+    .statistics .statistic span {
+      font-size: 48px;
+      font-size: 4.8rem; }
+
+footer {
+  margin: 60px 0 25px 0;
+  text-align: center;
+  position: relative; }
+
+.logo-footer {
+  width: 44%; }
+
+.social-links {
+  list-style-type: none;
+  margin-top: 40px;
+  padding-left: 0; }
+  .social-links li {
+    display: inline-block;
+    margin-right: 20px; }
+    .social-links li:last-child {
+      margin-right: 0; }
+
+.copyright {
+  font-size: 11px;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase; }
+
+.footer-logos {
+  width: 179px;
+  height: 41px;
+  margin-top: 90px; }
+
+.icon {
+  width: 32px;
+  height: 31px;
+  display: block; }
+
+.icon-facebook {
+  background-image: url(../img/svg/icons/facebook.svg); }
+
+.icon-instagram {
+  width: 30px;
+  background-image: url(../img/svg/icons/instagram.svg); }
+
+.icon-vimeo {
+  background-image: url(../img/svg/icons/vimeo.svg); }
 
 /*# sourceMappingURL=style.css.map */
