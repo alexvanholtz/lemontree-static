@@ -1,0 +1,65 @@
+section {
+  background-image: url('../img/svg/leaves-colored.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  min-height: 1000px;
+  margin-top: 60px;
+
+  h1 {
+    text-align: center;
+  }
+
+  .section-description {
+    max-width: 735px;
+    margin: 0 auto 90px auto;
+    text-align: center;
+    @include font-size(1.8);
+    line-height: 27px;
+    color: $gray-medium;
+  }
+}
+
+.community-small {
+  width: 48%;
+  background-color: $yellow-primary;
+  position: relative;
+  margin-bottom: 30px;
+  float: left;
+  box-shadow: 5px 5px 15px #ebebeb;
+
+  .community-image {
+
+  }
+
+  h2 {
+    position: absolute;
+    color: $white;
+    font-weight: normal;
+  }
+
+  p {
+    padding: 30px 48px;
+    @include font-size(1.751);
+    line-height: 22px;
+  }
+
+  a {
+    display: block;
+    padding: 0px 0 40px 48px; 
+    color: $gray-dark;
+    @include font-size(1.322);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+
+.community-small:nth-child(even) {
+  float: right;
+  // margin-top: 180px;
+}
+
+.community-small:nth-child(2) {
+  float: right;
+  margin-top: 180px;
+}

@@ -1,3 +1,197 @@
+/*------------------------------------*\
+    Global variables
+\*------------------------------------*/
+/*------------------------------------*\
+    Mixins
+\*------------------------------------*/
+/*------------------------------------*\
+    Layout/structure
+\*------------------------------------*/
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  color: #707070; }
 
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  font-size: 14px;
+  font-size: 1.4rem; }
+
+img {
+  width: 100%; }
+
+.container {
+  width: 1024px;
+  margin: 0 auto; }
+
+h1, .h1 {
+  font-size: 46px;
+  font-size: 4.6rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 30px 0; }
+
+h2, .h2 {
+  font-size: 24px;
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 30px 0; }
+
+.pull-right {
+  float: right; }
+
+.pull-left {
+  float: right; }
+
+.btn {
+  display: inline-block;
+  background-color: #FEDE59;
+  border: 2px solid #FEDE59;
+  padding: 1.5rem 5rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #707070; }
+
+.btn--outlined {
+  border: 2px solid #707070;
+  background: transparent;
+  font-size: 16px;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  padding: 1.5rem 3rem; }
+
+.header {
+  height: 120px;
+  padding-top: 40px;
+  position: relative;
+  letter-spacing: 1px; }
+
+.logo {
+  width: 185px;
+  height: 49px;
+  display: block;
+  background-image: url(../img/svg/logo.svg);
+  text-indent: -9999px;
+  float: left;
+  margin-left: 40px; }
+
+.main-nav {
+  list-stye: none;
+  float: left; }
+
+.main-nav__item {
+  display: inline; }
+  .main-nav__item a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #707070;
+    margin-right: 3rem;
+    transition: all 0.2s ease-in-out; }
+    .main-nav__item a:hover {
+      color: #000; }
+
+.main-nav__trigger {
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+  margin-top: 10px; }
+  .main-nav__trigger .line {
+    display: inline-block;
+    position: absolute;
+    width: 22px;
+    height: 4px;
+    border-radius: 20px;
+    background: #707070;
+    transition: all 0.2s ease-in-out; }
+  .main-nav__trigger .line.one {
+    transform: scale(1);
+    opacity: 1; }
+  .main-nav__trigger .line.two {
+    top: 8px;
+    transform: scale(1);
+    opacity: 1; }
+  .main-nav__trigger .line.three {
+    top: 16px;
+    transform: scale(1);
+    opacity: 1; }
+  .main-nav__trigger:hover .line {
+    background: #000; }
+  .main-nav__trigger.close .line.one {
+    transform: rotate(45deg);
+    top: 38px; }
+  .main-nav__trigger.close .line.two {
+    width: 0;
+    transform: scale(0);
+    opacity: 0; }
+  .main-nav__trigger.close .line.three {
+    transform: rotate(45deg);
+    top: 38px; }
+
+.main-nav__trigger::after {
+  content: "More";
+  position: relative;
+  padding-left: 30px;
+  top: 4px;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  margin-right: 3rem; }
+
+.main-nav__trigger:hover::after {
+  color: #000; }
+
+section {
+  background-image: url("../img/svg/leaves-colored.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  min-height: 1000px;
+  margin-top: 60px; }
+  section h1 {
+    text-align: center; }
+  section .section-description {
+    max-width: 735px;
+    margin: 0 auto 90px auto;
+    text-align: center;
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 27px;
+    color: #7B7B7B; }
+
+.community-small {
+  width: 48%;
+  background-color: #F9E35F;
+  position: relative;
+  margin-bottom: 30px;
+  float: left;
+  box-shadow: 5px 5px 15px #ebebeb; }
+  .community-small h2 {
+    position: absolute;
+    color: #fff;
+    font-weight: normal; }
+  .community-small p {
+    padding: 30px 48px;
+    font-size: 17.51px;
+    font-size: 1.751rem;
+    line-height: 22px; }
+  .community-small a {
+    display: block;
+    padding: 0px 0 40px 48px;
+    color: #707070;
+    font-size: 13.22px;
+    font-size: 1.322rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
+
+.community-small:nth-child(even) {
+  float: right; }
+
+.community-small:nth-child(2) {
+  float: right;
+  margin-top: 180px; }
 
 /*# sourceMappingURL=style.css.map */

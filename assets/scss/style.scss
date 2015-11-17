@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    Global variables
+\*------------------------------------*/
+
+$yellow-primary: #F9E35F;
+$yellow-secondary: #FEDE59;
+
+$gray-dark: #707070;
+$gray-light: #F2F2F2;
+$gray-medium: #7B7B7B;
+
+$white: #fff;
+$black: #000;
+
+$base-font: 'Josefin Sans', sans-serif;
+
+$base-width: 1024px;
+
+@import "mixins";
+@import "layout";
+@import "buttons";
+@import "header";
+@import "body";
+@import "footer";
+
+
