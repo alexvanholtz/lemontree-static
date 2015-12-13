@@ -24,7 +24,8 @@ img {
   width: 100%; }
 
 .container {
-  width: 1024px;
+  max-width: 1024px;
+  width: 100%;
   margin: 0 auto;
   clear: both; }
 
@@ -71,6 +72,8 @@ p, a {
 
 a {
   color: #707070; }
+  a:hover {
+    color: #000; }
 
 .link-arrow {
   font-size: 13.55px;
@@ -167,8 +170,7 @@ textarea {
   display: block;
   background-image: url(../img/svg/logo.svg);
   text-indent: -9999px;
-  float: left;
-  margin-left: 40px; }
+  float: left; }
 
 .main-nav {
   list-stye: none;
@@ -259,41 +261,71 @@ textarea {
     text-align: center;
     font-size: 18px;
     font-size: 1.8rem;
-    line-height: 27px;
+    line-height: 30px;
     color: #7B7B7B; }
 
+.communities-list {
+  padding: 0 30px; }
+
 .community-small {
-  width: 48%;
+  max-width: 460px;
   background-color: #F9E35F;
   position: relative;
   margin-bottom: 30px;
   float: left;
   box-shadow: 5px 5px 15px #ebebeb; }
-  .community-small h2 {
+  @media (max-width: 800px) {
+    .community-small {
+      width: 90%;
+      float: none;
+      margin: 0 auto 30px; } }
+
+.community-small p {
+  padding: 30px 48px;
+  font-size: 17.51px;
+  font-size: 1.751rem;
+  line-height: 22px; }
+
+.community-small a {
+  display: block;
+  padding: 0px 0 40px 48px;
+  color: #707070;
+  font-size: 13.22px;
+  font-size: 1.322rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+
+.community-image {
+  height: 300px;
+  position: relative;
+  color: white;
+  background-image: url(../img/lakenona.jpg);
+  background-size: cover; }
+  .community-image h2 {
     position: absolute;
-    color: #fff;
-    font-weight: normal; }
-  .community-small p {
-    padding: 30px 48px;
-    font-size: 17.51px;
-    font-size: 1.751rem;
-    line-height: 22px; }
-  .community-small a {
-    display: block;
-    padding: 0px 0 40px 48px;
-    color: #707070;
-    font-size: 13.22px;
-    font-size: 1.322rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px; }
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-weight: normal;
+    left: 0;
+    width: 100%;
+    margin: 10px 0 0 0;
+    padding: 0; }
 
 .community-small:nth-child(even) {
   float: right; }
+  @media (max-width: 800px) {
+    .community-small:nth-child(even) {
+      float: none; } }
 
 .community-small:nth-child(2) {
   float: right;
   margin-top: 180px; }
+  @media (max-width: 800px) {
+    .community-small:nth-child(2) {
+      float: none;
+      margin-top: 0; } }
 
 /*------------------------------------*\
     COMMUNITY PAGE
@@ -350,7 +382,13 @@ textarea {
         .community .community-neighborhoods ul li a {
           font-size: 14px;
           font-size: 1.4rem;
-          text-decoration: none; }
+          text-decoration: none;
+          transition: all 0.2s ease-in-out; }
+          .community .community-neighborhoods ul li a:hover {
+            color: #000; }
+          .community .community-neighborhoods ul li a:hover:after {
+            content: url(../img/svg/arrow.svg);
+            margin-left: 10px; }
 
 .statistics {
   padding-top: 60px; }
