@@ -44,8 +44,15 @@ footer {
   width: 32px;
   height: 31px;
   display: block;
+  background-size: contain;
+  -webkit-transition: all 0.4s;
+          transition: all 0.4s;  
+  &:hover{    
+  -webkit-transform: translateY(2px);
+      -ms-transform: translateY(2px);
+          transform: translateY(2px);
+  }
 }
-
 
 .icon-facebook {
   background-image: url(../img/svg/icons/facebook.svg);
@@ -53,6 +60,7 @@ footer {
 
 .icon-instagram {
   width: 30px;  
+  height: 30px;
   background-image: url(../img/svg/icons/instagram.svg);
 }
 

@@ -342,8 +342,9 @@ textarea {
     padding-top: 130px; }
   .community .community-sidebar {
     width: 24%;
-    position: relative;
-    background-color: #F9E35F;
+    position: absolute;
+    top: 0;
+    left: 0;
     background-image: url(../img/svg/leaves-branch.svg);
     height: 550px;
     background-position: 250% 300%;
@@ -353,14 +354,21 @@ textarea {
     background-color: #fff;
     width: 76%;
     padding: 40px 70px 50px 50px;
-    position: absolute;
-    top: -375px;
-    right: 0; }
+    float: right;
+    margin-top: -375px;
+    *zoom: 1; }
+    .community .community-description:before, .community .community-description:after {
+      content: "";
+      display: table; }
+    .community .community-description:after {
+      clear: both; }
   .community .community-additional-links {
     margin-top: 50px; }
   .community .community-neighborhoods {
     background-color: #F2F2F2;
-    padding: 30px 0; }
+    padding: 30px 0;
+    margin-top: 200px;
+    clear: both; }
     .community .community-neighborhoods h3 {
       text-align: center; }
     .community .community-neighborhoods ul {
@@ -432,13 +440,21 @@ footer {
 .icon {
   width: 32px;
   height: 31px;
-  display: block; }
+  display: block;
+  background-size: contain;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s; }
+  .icon:hover {
+    -webkit-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    transform: translateY(2px); }
 
 .icon-facebook {
   background-image: url(../img/svg/icons/facebook.svg); }
 
 .icon-instagram {
   width: 30px;
+  height: 30px;
   background-image: url(../img/svg/icons/instagram.svg); }
 
 .icon-vimeo {
