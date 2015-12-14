@@ -22,14 +22,14 @@
     Hero
 \*------------------------------------*/
 .hero {
-  max-height: 683px;
+  max-height: 570px;
   width: 100%;
-  height: 683px;
+  height: 570px;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: 0% 20%;
-  
+
   h1 {
     @include font-size(3.6);
     letter-spacing: 4.5px;
@@ -61,7 +61,7 @@
   background-image: url('../img/svg/leaves-colored.svg');
   background-repeat: no-repeat;
   background-position: 50% 100px;
-  padding-top: 120px;
+  padding: 120px 30px 0 30px;
   height: 100%;
   @include clearfix;
   h1, h2 {
@@ -81,11 +81,25 @@
   @include font-size(1.8);
   line-height: 30px;
   color: $gray-medium;
+  @include clearfix;
 }
 
 .content--yellow {
   background-color: $yellow-primary;
   background-image: url('../img/svg/leaves.svg');
+}
+
+.content--no-bg {
+  background-image: none;
+}
+
+.content--less-bottom {
+  margin-bottom: 60px;
+}
+
+.content--full {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .content--home {
@@ -212,7 +226,7 @@
     width: 76%;
     padding: 40px 70px 50px 50px;
     float: right;
-    margin-top: -375px;
+    margin-top: -275px;
     @include clearfix;
   }
 
@@ -311,3 +325,38 @@
 .team-member-description--right {
   right: 0;
 }
+
+/*------------------------------------*\
+    CONTACT PAGE
+\*------------------------------------*/
+
+.map {
+  max-width: 472px;
+  float: left;
+  border: 10px solid $white;
+  margin-top: -220px;
+}
+
+.contact-info  {
+  text-align: left;
+  float: right;
+}
+
+.contact-info a {
+  text-decoration: none;
+}
+
+.contact-info, .contact-info a{
+  @include font-size(1.3);
+  line-height: 20px;
+}
+
+.address, .phone, .fax, .email {
+  display: block;
+  letter-spacing: 1.5px;  
+}
+
+.address, .fax {
+  margin-bottom: 20px;
+}
+

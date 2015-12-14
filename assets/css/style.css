@@ -18,7 +18,14 @@ html {
 
 body {
   font-size: 14px;
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  background-image: url("../img/svg/leaves-right.svg");
+  background-position: 100% 97%;
+  background-repeat: no-repeat; }
+
+.double-bg {
+  background-image: url("../img/svg/leaves-right.svg"), url("../img/svg/leaves-left.svg");
+  background-position: 100% 97%, 0% 75%; }
 
 img {
   width: 100%; }
@@ -74,6 +81,18 @@ a {
   color: #707070; }
   a:hover {
     color: #000; }
+
+.padding--no-top {
+  padding-top: 0 !important; }
+
+.padding--no-bottom {
+  padding-bottom: 0 !important; }
+
+.margin--no-top {
+  margin-top: 0 !important; }
+
+.margin--no-bottom {
+  margin-bottom: 0 !important; }
 
 .pull-right {
   float: right; }
@@ -258,9 +277,9 @@ textarea {
     Hero
 \*------------------------------------*/
 .hero {
-  max-height: 683px;
+  max-height: 570px;
   width: 100%;
-  height: 683px;
+  height: 570px;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -289,7 +308,7 @@ textarea {
   background-image: url("../img/svg/leaves-colored.svg");
   background-repeat: no-repeat;
   background-position: 50% 100px;
-  padding-top: 120px;
+  padding: 120px 30px 0 30px;
   height: 100%;
   *zoom: 1; }
   .content:before, .content:after {
@@ -311,11 +330,27 @@ textarea {
   font-size: 18px;
   font-size: 1.8rem;
   line-height: 30px;
-  color: #7B7B7B; }
+  color: #7B7B7B;
+  *zoom: 1; }
+  .content-body:before, .content-body:after {
+    content: "";
+    display: table; }
+  .content-body:after {
+    clear: both; }
 
 .content--yellow {
   background-color: #F9E35F;
   background-image: url("../img/svg/leaves.svg"); }
+
+.content--no-bg {
+  background-image: none; }
+
+.content--less-bottom {
+  margin-bottom: 60px; }
+
+.content--full {
+  padding-left: 0;
+  padding-right: 0; }
 
 .content--home {
   background-position: 50% 300px; }
@@ -418,7 +453,7 @@ textarea {
     width: 76%;
     padding: 40px 70px 50px 50px;
     float: right;
-    margin-top: -375px;
+    margin-top: -275px;
     *zoom: 1; }
     .community .community-description:before, .community .community-description:after {
       content: "";
@@ -495,6 +530,34 @@ textarea {
 .team-member-description--right {
   right: 0; }
 
+/*------------------------------------*\
+    CONTACT PAGE
+\*------------------------------------*/
+.map {
+  max-width: 472px;
+  float: left;
+  border: 10px solid #fff;
+  margin-top: -220px; }
+
+.contact-info {
+  text-align: left;
+  float: right; }
+
+.contact-info a {
+  text-decoration: none; }
+
+.contact-info, .contact-info a {
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 20px; }
+
+.address, .phone, .fax, .email {
+  display: block;
+  letter-spacing: 1.5px; }
+
+.address, .fax {
+  margin-bottom: 20px; }
+
 footer {
   margin: 60px 0 25px 0;
   text-align: center;
@@ -513,16 +576,28 @@ footer {
     .social-links li:last-child {
       margin-right: 0; }
 
+.footer-bottom {
+  text-align: left;
+  margin-top: 120px;
+  *zoom: 1; }
+  .footer-bottom:before, .footer-bottom:after {
+    content: "";
+    display: table; }
+  .footer-bottom:after {
+    clear: both; }
+
 .copyright {
   font-size: 11px;
   font-size: 1.1rem;
   letter-spacing: 2px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  float: left;
+  margin-left: 20px; }
 
 .footer-logos {
   width: 179px;
   height: 41px;
-  margin-top: 90px; }
+  float: left; }
 
 .icon {
   width: 32px;

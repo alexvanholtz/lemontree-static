@@ -15,6 +15,14 @@ html {
 
 body {
   @include font-size(1.4);
+  background-image: url('../img/svg/leaves-right.svg');
+  background-position: 100% 97%;
+  background-repeat: no-repeat;
+}
+
+.double-bg {
+  background-image: url('../img/svg/leaves-right.svg'), url('../img/svg/leaves-left.svg');
+  background-position: 100% 97%, 0% 75%;  
 }
 
 img {
@@ -77,6 +85,22 @@ a {
   &:hover {
     color: $black;
   }  
+}
+
+.padding--no-top {
+  padding-top: 0 !important;
+}
+
+.padding--no-bottom {
+  padding-bottom: 0 !important;
+}
+
+.margin--no-top {
+  margin-top: 0 !important;
+}
+
+.margin--no-bottom {
+  margin-bottom: 0 !important;
 }
 
 .pull-right {

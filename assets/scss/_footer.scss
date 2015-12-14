@@ -24,20 +24,24 @@ footer {
 
 }
 
-// .footer-bottom {
-//   float: left;
-// }
+.footer-bottom {
+  text-align: left;
+  margin-top: 120px;
+  @include clearfix;
+}
 
 .copyright {
   @include font-size(1.1);
   letter-spacing: 2px;
   text-transform: uppercase;
+  float: left;
+  margin-left: 20px;
 }
 
 .footer-logos {
   width: 179px;
   height: 41px;
-  margin-top: 90px;
+  float: left;
 }
 
 .icon {
