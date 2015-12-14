@@ -27,8 +27,24 @@
     border-color: $yellow-secondary;
     background-color: $yellow-secondary;
 
-
-
   }  
 }
 
+.link-arrow {
+  @include font-size(1.355);
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  &:after {
+    content: url(../img/svg/arrow.svg);
+    margin-left: 10px;
+    transition: all 0.2s ease-in-out;
+  }
+  &:hover:after {
+    margin-left: 15px;
+  }
+  &:hover {
+    color: #000;
+  }  
+}

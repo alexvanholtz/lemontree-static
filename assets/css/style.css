@@ -75,20 +75,6 @@ a {
   a:hover {
     color: #000; }
 
-.link-arrow {
-  font-size: 13.55px;
-  font-size: 1.355rem;
-  display: block;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-decoration: none; }
-  .link-arrow:after {
-    content: url(../img/svg/arrow.svg);
-    margin-left: 10px;
-    transition: all 0.2s ease-in-out; }
-  .link-arrow:hover:after {
-    margin-left: 15px; }
-
 .pull-right {
   float: right; }
 
@@ -120,6 +106,22 @@ a {
   .btn--outlined:hover {
     border-color: #FEDE59;
     background-color: #FEDE59; }
+
+.link-arrow {
+  font-size: 13.55px;
+  font-size: 1.355rem;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none; }
+  .link-arrow:after {
+    content: url(../img/svg/arrow.svg);
+    margin-left: 10px;
+    transition: all 0.2s ease-in-out; }
+  .link-arrow:hover:after {
+    margin-left: 15px; }
+  .link-arrow:hover {
+    color: #000; }
 
 .contact-form {
   margin: 60px auto; }
@@ -236,36 +238,97 @@ textarea {
 .main-nav__trigger:hover::after {
   color: #000; }
 
+/*------------------------------------*\
+    CTA Bar
+\*------------------------------------*/
+.cta-bar {
+  height: 40px;
+  background-color: #FEDE59;
+  text-align: center;
+  position: relative; }
+  .cta-bar a {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+  @media (max-width: 768px) {
+    .cta-bar {
+      display: none; } }
+
+/*------------------------------------*\
+    Hero
+\*------------------------------------*/
 .hero {
   max-height: 683px;
   width: 100%;
   height: 683px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  background-position: 0% 20%; }
+  .hero h1 {
+    font-size: 36px;
+    font-size: 3.6rem;
+    letter-spacing: 4.5px;
+    color: #fff;
+    text-align: center;
+    padding-top: 80px;
+    margin-top: 0; }
+
+.hero--home h1 {
+  padding-top: 115px; }
+
+.hero--large-heading h1 {
+  font-size: 48px;
+  font-size: 4.8rem;
+  letter-spacing: 5.6px; }
+
+/*------------------------------------*\
+    Section
+\*------------------------------------*/
+.content {
+  background-image: url("../img/svg/leaves-colored.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 100px;
+  padding-top: 120px;
+  height: 100%;
+  *zoom: 1; }
+  .content:before, .content:after {
+    content: "";
+    display: table; }
+  .content:after {
+    clear: both; }
+  .content h1, .content h2 {
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0; }
+  .content .container {
+    height: 100%; }
+
+.content-body {
+  max-width: 735px;
+  margin: 0 auto 120px auto;
+  text-align: center;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 30px;
+  color: #7B7B7B; }
+
+.content--yellow {
+  background-color: #F9E35F;
+  background-image: url("../img/svg/leaves.svg"); }
+
+.content--home {
+  background-position: 50% 300px; }
+  .content--home .h2 {
+    font-weight: normal;
+    letter-spacing: 8px; }
 
 /*------------------------------------*\
     COMMUNITIES PAGE
 \*------------------------------------*/
-.communities {
-  background-image: url("../img/svg/leaves-colored.svg");
-  background-repeat: no-repeat;
-  background-position: top center;
-  min-height: 1000px;
-  margin-top: 60px; }
-  .communities h1 {
-    text-align: center; }
-  .communities .communities-description {
-    max-width: 735px;
-    margin: 0 auto 90px auto;
-    text-align: center;
-    font-size: 18px;
-    font-size: 1.8rem;
-    line-height: 30px;
-    color: #7B7B7B; }
-
 .communities-list {
-  padding: 0 30px; }
+  padding: 0 30px;
+  height: 100%; }
 
 .community-small {
   max-width: 460px;
@@ -407,6 +470,30 @@ textarea {
     .statistics .statistic span {
       font-size: 48px;
       font-size: 4.8rem; }
+
+/*------------------------------------*\
+    TEAM PAGE
+\*------------------------------------*/
+.team-member {
+  height: 570px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+  .team-member .container {
+    height: 100%;
+    position: relative; }
+
+.team-member-description,
+.team-member-description--right,
+.team-member-description--left {
+  max-width: 320px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.team-member-description--right {
+  right: 0; }
 
 footer {
   margin: 60px 0 25px 0;

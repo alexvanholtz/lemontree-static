@@ -1,3 +1,26 @@
+/*------------------------------------*\
+    CTA Bar
+\*------------------------------------*/
+.cta-bar {
+  height: 40px;
+  background-color: $yellow-secondary;
+  text-align: center;
+  position: relative;
+  a {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);    
+  }
+
+  @media (max-width: 768px){
+    display: none;
+  }
+}
+
+
+/*------------------------------------*\
+    Hero
+\*------------------------------------*/
 .hero {
   max-height: 683px;
   width: 100%;
@@ -5,55 +28,100 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-
+  background-position: 0% 20%;
+  
+  h1 {
+    @include font-size(3.6);
+    letter-spacing: 4.5px;
+    color: #fff;
+    text-align: center;
+    padding-top: 80px;
+    margin-top: 0;
+  }
 }
+
+.hero--home {
+  h1 {
+    padding-top: 115px;    
+  }
+}
+
+.hero--large-heading {
+  h1 {
+    @include font-size(4.8);
+    letter-spacing: 5.6px;
+  }
+}
+
+
+/*------------------------------------*\
+    Section
+\*------------------------------------*/
+.content {
+  background-image: url('../img/svg/leaves-colored.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 100px;
+  padding-top: 120px;
+  height: 100%;
+  @include clearfix;
+  h1, h2 {
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .container {
+    height: 100%;
+  }
+}
+
+.content-body {
+  max-width: 735px;
+  margin: 0 auto 120px auto;
+  text-align: center;
+  @include font-size(1.8);
+  line-height: 30px;
+  color: $gray-medium;
+}
+
+.content--yellow {
+  background-color: $yellow-primary;
+  background-image: url('../img/svg/leaves.svg');
+}
+
+.content--home {
+  background-position: 50% 300px;
+
+  .h2 {
+    font-weight: normal;
+    letter-spacing: 8px;
+  }
+}
+
 
 /*------------------------------------*\
     COMMUNITIES PAGE
 \*------------------------------------*/
-
-.communities {
-  background-image: url('../img/svg/leaves-colored.svg');
-  background-repeat: no-repeat;
-  background-position: top center;
-  min-height: 1000px;
-  margin-top: 60px;
-  h1 {
-    text-align: center;
-  }
-
-  .communities-description {
-    max-width: 735px;
-    margin: 0 auto 90px auto;
-    text-align: center;
-    @include font-size(1.8);
-    line-height: 30px;
-    color: $gray-medium;
-  }
-}
-
 .communities-list {
   padding: 0 30px;
+  height: 100%;
 }
 
 .community-small {
-  // width: 48%;
   max-width: 460px;
   background-color: $yellow-primary;
   position: relative;
   margin-bottom: 30px;
   float: left;
   box-shadow: 5px 5px 15px #ebebeb;
-
+  
   @media (max-width: 800px){
     width: 90%;
     float: none;
     margin: 0 auto 30px;
   }
-
 }
 
- .community-small p {
+.community-small p {
   padding: 30px 48px;
   @include font-size(1.751);
   line-height: 22px;
@@ -69,27 +137,26 @@
   letter-spacing: 2px;
 }
 
-
 .community-image {
-    height: 300px;
-    position: relative;
-    color: white;
-    background-image: url(../img/lakenona.jpg);
-    background-size: cover;
+  height: 300px;
+  position: relative;
+  color: white;
+  background-image: url(../img/lakenona.jpg);
+  background-size: cover;
 
-    h2 {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      text-align: center;
-      font-weight: normal;
-      left: 0;
-      width: 100%;
-      margin: 10px 0 0 0;
-      padding: 0;
-    }
-
+  h2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-weight: normal;
+    left: 0;
+    width: 100%;
+    margin: 10px 0 0 0;
+    padding: 0;
   }
+
+}
 
 .community-small:nth-child(even) {
   float: right;
@@ -109,12 +176,11 @@
   }    
 }
 
+
 /*------------------------------------*\
     COMMUNITY PAGE
 \*------------------------------------*/
-
 .community {
-
   position: relative;
   background-color: $yellow-primary;
 
@@ -205,14 +271,43 @@
   padding-top: 60px;
 
   .statistic {
-
     padding-bottom: 50px;
 
     h4 {
       margin: 10px 0;
     }
+
     span {
       @include font-size(4.8);
     }
   }
+}
+
+/*------------------------------------*\
+    TEAM PAGE
+\*------------------------------------*/
+.team-member {
+  height: 570px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  .container{
+    height: 100%;
+    position: relative;
+  }
+}
+
+.team-member-description, 
+.team-member-description--right,
+.team-member-description--left {
+  max-width: 320px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);  
+}
+
+.team-member-description--right {
+  right: 0;
 }
