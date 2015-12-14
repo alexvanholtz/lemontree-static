@@ -75,6 +75,13 @@ hr.small {
   border-top: 1px solid #979797;
 }
 
+hr.medium{
+  width: 50%;
+  margin-bottom: 20px;
+  border-bottom: none;
+  border-top: 1px solid #979797;
+}
+
 p, a {
   @include font-size(1.8);
   line-height: 24px;
@@ -85,6 +92,10 @@ a {
   &:hover {
     color: $black;
   }  
+}
+
+.row {
+  @include clearfix;
 }
 
 .padding--no-top {

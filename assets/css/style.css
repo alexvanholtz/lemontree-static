@@ -72,6 +72,12 @@ hr.small {
   border-bottom: none;
   border-top: 1px solid #979797; }
 
+hr.medium {
+  width: 50%;
+  margin-bottom: 20px;
+  border-bottom: none;
+  border-top: 1px solid #979797; }
+
 p, a {
   font-size: 18px;
   font-size: 1.8rem;
@@ -81,6 +87,14 @@ a {
   color: #707070; }
   a:hover {
     color: #000; }
+
+.row {
+  *zoom: 1; }
+  .row:before, .row:after {
+    content: "";
+    display: table; }
+  .row:after {
+    clear: both; }
 
 .padding--no-top {
   padding-top: 0 !important; }
@@ -125,6 +139,18 @@ a {
   .btn--outlined:hover {
     border-color: #FEDE59;
     background-color: #FEDE59; }
+
+.btn--outlined-white {
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent; }
+  .btn--outlined-white:hover {
+    border-color: #fff;
+    background-color: #fff;
+    color: #7B7B7B; }
+
+.btn--fluid {
+  width: 100% !important; }
 
 .link-arrow {
   font-size: 13.55px;
@@ -181,9 +207,9 @@ textarea {
 
 .header {
   height: 120px;
-  padding-top: 40px;
   position: relative;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  padding: 40px 30px 0 30px; }
 
 .logo {
   width: 185px;
@@ -196,6 +222,9 @@ textarea {
 .main-nav {
   list-stye: none;
   float: left; }
+  @media (max-width: 768px) {
+    .main-nav {
+      display: none; } }
 
 .main-nav__item {
   display: inline; }
@@ -283,7 +312,7 @@ textarea {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-position: 0% 20%; }
+  background-position: 50% 20%; }
   .hero h1 {
     font-size: 36px;
     font-size: 3.6rem;
@@ -292,6 +321,22 @@ textarea {
     text-align: center;
     padding-top: 80px;
     margin-top: 0; }
+  @media (min-width: 1200px) {
+    .hero {
+      max-height: 600px; } }
+  @media (min-width: 1300px) {
+    .hero {
+      max-height: 700px; } }
+  @media (max-width: 1100px) {
+    .hero {
+      max-height: 500px; } }
+  @media (max-width: 768px) {
+    .hero {
+      background-attachment: scroll;
+      max-height: 400px; } }
+  @media (max-width: 550px) {
+    .hero {
+      max-height: 250px; } }
 
 .hero--home h1 {
   padding-top: 115px; }
@@ -308,7 +353,7 @@ textarea {
   background-image: url("../img/svg/leaves-colored.svg");
   background-repeat: no-repeat;
   background-position: 50% 100px;
-  padding: 120px 30px 0 30px;
+  padding: 120px 30px 120px 30px;
   height: 100%;
   *zoom: 1; }
   .content:before, .content:after {
@@ -347,6 +392,9 @@ textarea {
 
 .content--less-bottom {
   margin-bottom: 60px; }
+
+.content--less-top {
+  padding-top: 60px; }
 
 .content--full {
   padding-left: 0;
@@ -558,13 +606,99 @@ textarea {
 .address, .fax {
   margin-bottom: 20px; }
 
+/*------------------------------------*\
+    BLOG PAGE
+\*------------------------------------*/
+.blog-bar {
+  background: #F9E35F;
+  min-height: 160px;
+  text-align: center;
+  padding: 20px 30px 0 30px; }
+  .blog-bar h1, .blog-bar .h2 {
+    padding: 25px 0 25px;
+    margin: 0; }
+
+.buttonGrid25 {
+  width: 25%;
+  float: left;
+  padding-right: 20px;
+  margin-bottom: 20px; }
+  @media (max-width: 1030px) {
+    .buttonGrid25 {
+      width: 33.3%; } }
+  @media (max-width: 800px) {
+    .buttonGrid25 {
+      width: 50%; } }
+  @media (max-width: 600px) {
+    .buttonGrid25 {
+      width: 100%; } }
+
+@media (min-width: 1031px) {
+  .buttonGrid25:nth-child(4n) {
+    padding-right: 0; } }
+
+@media (max-width: 1030px) and (min-width: 801px) {
+  .buttonGrid25:nth-child(3n) {
+    padding-right: 0; } }
+
+@media (max-width: 800px) and (min-width: 601px) {
+  .buttonGrid25:nth-child(2n) {
+    padding-right: 0; } }
+
+/*------------------------------------*\
+    POST PAGE
+\*------------------------------------*/
+.post {
+  text-align: left;
+  float: left;
+  max-width: 700px; }
+  .post h2 {
+    font-weight: normal;
+    text-align: left;
+    margin-bottom: 0px;
+    padding-bottom: 0px; }
+  .post h3 {
+    margin: 25px 0; }
+  .post p {
+    line-height: 27px; }
+  @media (max-width: 1000px) {
+    .post {
+      max-width: 650px; } }
+  @media (max-width: 920px) {
+    .post {
+      max-width: 600px; } }
+  @media (max-width: 870px) {
+    .post {
+      max-width: 550px; } }
+  @media (max-width: 820px) {
+    .post {
+      max-width: 500px; } }
+  @media (max-width: 768px) {
+    .post {
+      max-width: 100%;
+      float: none; } }
+
+.post-sidebar {
+  max-width: 150px;
+  text-align: center;
+  float: right;
+  margin-right: 30px; }
+  .post-sidebar img {
+    max-width: 120px; }
+  @media (max-width: 768px) {
+    .post-sidebar {
+      float: none;
+      width: 100%;
+      margin: 40px auto 0; } }
+
 footer {
   margin: 60px 0 25px 0;
   text-align: center;
-  position: relative; }
+  position: relative;
+  padding: 0 30px; }
 
 .logo-footer {
-  width: 44%; }
+  max-width: 440px; }
 
 .social-links {
   list-style-type: none;
