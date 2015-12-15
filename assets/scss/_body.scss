@@ -27,8 +27,8 @@
   height: 570px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
-  background-position: center bottom;
+  // background-attachment: fixed;
+  background-position: center center;
 
   h1 {
     @include font-size(3.6);
@@ -39,13 +39,13 @@
     margin-top: 0;
   }
 
-  @media (min-width: 1200px) {
-    height: 600px;
-  }  
+  // @media (min-width: 1200px) {
+  //   height: 600px;
+  // }  
   
-  @media (min-width: 1300px) {
-   height: 700px;
-  }    
+  // @media (min-width: 1300px) {
+  //  height: 700px;
+  // }    
 
   @media (max-width: 1100px) {
     height: 500px;
@@ -85,7 +85,7 @@
   background-image: url('../img/svg/leaves-colored.svg');
   background-repeat: no-repeat;
   background-position: 50% 60px;
-  padding: 120px 30px 120px 30px;
+  padding: 120px 0 120px 0;
   height: 100%;
   @include clearfix;
   h1, h2 {
@@ -105,6 +105,7 @@
   @include font-size(1.8);
   line-height: 30px;
   color: $gray-medium;
+  padding: 0 30px;
   @include clearfix;
 }
 
@@ -156,6 +157,10 @@
 .communities-list {
   padding: 0 30px;
   height: 100%;
+
+  @media (max-width: 900px){
+    padding: 0;
+  }
 }
 
 .community-small {
@@ -166,8 +171,28 @@
   float: left;
   box-shadow: 5px 5px 15px #ebebeb;
   
-  @media (max-width: 800px){
+  @media (max-width: 1100px){
+    max-width: 48%;
+    width: 48%;
+  }
+
+  @media (max-width: 900px){
+    max-width: 100%;
+    width: 80%;
+    float: none;
+    margin: 0 auto 30px;
+  }
+
+  @media (max-width: 750px){
+    max-width: 100%;
     width: 90%;
+    float: none;
+    margin: 0 auto 30px;
+  }
+
+  @media (max-width: 600px){
+    max-width: 100%;
+    width: 100%;
     float: none;
     margin: 0 auto 30px;
   }
@@ -213,7 +238,7 @@
 .community-small:nth-child(even) {
   float: right;
   
-  @media (max-width: 800px){
+  @media (max-width: 900px){
     float: none;
   }  
 }
@@ -222,7 +247,11 @@
   float: right;
   margin-top: 180px;
 
-  @media (max-width: 800px){
+
+
+      
+
+  @media (max-width: 900px){
     float: none;
     margin-top: 0;
   }    
@@ -373,11 +402,25 @@
   float: left;
   border: 10px solid $white;
   margin-top: -220px;
+
+  @media (max-width: 768px) {
+    float: none;
+    margin: -220px auto 0;
+  }
+
 }
 
 .contact-info  {
   text-align: left;
   float: right;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-top: 60px;
+
+  }
 }
 
 .contact-info a {

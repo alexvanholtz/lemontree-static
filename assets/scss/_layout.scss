@@ -20,6 +20,10 @@ body {
   background-repeat: no-repeat;
 }
 
+.yellow {
+  background-color: $yellow-primary;
+}
+
 .double-bg {
   background-image: url('../img/svg/leaves-right.svg'), url('../img/svg/leaves-left.svg');
   background-position: 100% 97%, 0% 75%;  

@@ -16,6 +16,12 @@
   // margin-left: 40px;  
 }
 
+.call {
+  @media (max-width: 1000px) {
+    display: none;
+  }  
+}
+
 .main-nav {
   list-stye: none;
   float: left;
@@ -30,6 +36,7 @@
   display: inline;
 
   a {
+    @include font-size(1.4);
     text-transform: uppercase;
     text-decoration: none;
     color: $gray-dark;
@@ -108,13 +115,104 @@
   text-transform: uppercase;  
   transition: all 0.2s ease-in-out;
   margin-right: 3rem;
-  // background-color: red;
+  @media (max-width: 1000px) {
+    content: "Menu";
+  }  
+
 }
 
 .main-nav__trigger:hover::after {
   color: $black;
 }
 
-.main-nav__item a {
-  @include font-size(1.4);
+
+
+/*------------------------------------*\
+    Hero
+\*------------------------------------*/
+
+.fs-menu {
+  background-color: $yellow-primary;
+  background-image: url('../img/svg/logo-large-muted.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 100px;
+  background-size: 80%;
+  height: 100%;
+  padding: 60px 0 30px 60px;
+  position: relative;
+  display: none;
+ 
 }
+
+.fs-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fs-menu li {
+  margin: 0;
+  display: block;
+  padding-bottom: 30px;
+}
+
+.fs-menu li a{
+  text-decoration: none;
+  @include font-size(3.2);
+  line-height: 1;
+
+  @media (max-width: 550px) {
+    @include font-size(2.4);    
+  }
+}
+
+.fs-menu-close {
+  background-image: url('../img/svg/close.svg');  
+  background-repeat: no-repeat;
+  background-position: center center;  
+  height: 120px;
+  width: 120px;
+  background-color: #FFF;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+
+  @media (max-width: 550px) {
+    height: 60px;
+    width: 60px;
+    background-size: 40%;
+  }
+  &:hover {
+    background-image: url('../img/svg/close-yellow.svg');  
+  }
+}
+
+.fs-menu .contact-info{
+  float: none;
+  margin-top: 40px;
+  @include clearfix;
+
+  .map-it {
+    text-decoration: underline;
+  }
+
+  .address,
+  .numbers,
+  .email,
+  .social-links {
+    float: left;
+    display: block;
+    margin-right: 60px;
+
+    @media (max-width: 730px) {
+      width: 100%;
+    }
+  }
+
+  .email {
+    margin-bottom: 10px;
+  }
+
+}
+

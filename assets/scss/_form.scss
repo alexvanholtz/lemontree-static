@@ -1,6 +1,8 @@
 .contact-form {
-  margin: 60px auto;
-  
+  margin: 60px auto 100px;
+  padding: 0 30px;
+  max-width: 735px;
+
   h3 {
     letter-spacing: 3.33px;
     text-align: center;
@@ -10,9 +12,7 @@
 
 }
 
-
 form {
-  width: 65%;
   margin: 0 auto;
   text-align: center;
 }
@@ -26,15 +26,22 @@ input[type='text'], input[type='email'] {
   text-transform: uppercase;
   color: #707070;
 
+  @media (max-width: 550px) {
+    width: 100%;
+    float: none;
+  }
 }
 
-
-input[type='name'] {
+input[type='text'] {
   float: left;
+
+  @media (max-width: 550px) {
+    margin-bottom: 30px;
+  }  
 }
 
 input[type='email'] {
-  float: right;
+  float: right;   
 }
 
 textarea {
