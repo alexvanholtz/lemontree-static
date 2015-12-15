@@ -193,6 +193,10 @@
   margin-top: 40px;
   @include clearfix;
 
+    @media (max-width: 730px) {
+      text-align: left;
+    }
+
   .map-it {
     text-decoration: underline;
   }
@@ -204,6 +208,7 @@
     float: left;
     display: block;
     margin-right: 60px;
+    text-align: left;
 
     @media (max-width: 730px) {
       width: 100%;
