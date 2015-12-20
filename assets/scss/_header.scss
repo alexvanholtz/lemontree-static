@@ -1,20 +1,32 @@
 .header {
   height: 120px;
-  position: relative;
+  position: fixed;
   letter-spacing: 1px;  
   padding: 33px 30px 0 30px;
+  width: 100%;
+  background-color: $white;
+  z-index: 1;
 }
 
+
 .logo {
+  position: relative;
+
   width: 185px;
   height: 49px;
   display: block;
-  margin-top: 5px;
+  
+  // position: relative;
+  // top: 50%;
+  // transform: translateY(-50%); 
+  // margin-top: 0;
+
   background-image: url(../img/svg/logo.svg);
   text-indent: -9999px;
   float: left;
   // margin-left: 40px;  
 }
+
 
 .call {
   @media (max-width: 1000px) {
@@ -115,8 +127,11 @@
   text-transform: uppercase;  
   transition: all 0.2s ease-in-out;
   margin-right: 3rem;
+
   @media (max-width: 1000px) {
     content: "Menu";
+    margin-right: 0;
+
   }  
 
 }
@@ -125,10 +140,49 @@
   color: $black;
 }
 
+/*------------------------------------*\
+    Header Shrink
+\*------------------------------------*/
+
+.header--shrink {
+  height: 60px;
+  // background-color: red;
+  padding: 0 30px;
+  border-bottom: 1px solid $gray-light;
+
+
+  .logo {
+    height: 26px;
+    background-image: url(../img/svg/logo-no-slogan.svg);
+    background-repeat: no-repeat;
+    margin-top: 17px;
+
+
+  }
+  .main-nav {
+    margin-top: 0;
+    display: none;
+  }
+  .main-nav__trigger {
+    margin-top: 20px;
+
+    &::after {
+      content: 'Menu';
+      margin-right: 0;
+    }
+  }
+
+  .call {
+    display: none;
+  }
+
+}
+
+
 
 
 /*------------------------------------*\
-    Hero
+    Menu
 \*------------------------------------*/
 
 .fs-menu {
