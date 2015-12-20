@@ -251,7 +251,7 @@ textarea {
   text-indent: -9999px;
   float: left; }
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
   .call {
     display: none; } }
 
@@ -325,7 +325,9 @@ textarea {
   margin-right: 3rem; }
   @media (max-width: 1000px) {
     .main-nav__trigger::after {
-      content: "Menu";
+      content: "Menu"; } }
+  @media (max-width: 768px) {
+    .main-nav__trigger::after {
       margin-right: 0; } }
 
 .main-nav__trigger:hover::after {
@@ -481,15 +483,18 @@ textarea {
   @media (max-width: 1100px) {
     .hero {
       height: 500px; } }
-  @media (max-width: 900px) {
-    .hero {
-      background-attachment: scroll; } }
   @media (max-width: 768px) {
     .hero {
       height: 350px; } }
   @media (max-width: 550px) {
     .hero {
       height: 250px; } }
+
+.hero--parallax {
+  background-attachment: fixed; }
+  @media (max-width: 769px) {
+    .hero--parallax {
+      background-attachment: scroll; } }
 
 .hero--home h1 {
   padding-top: 115px; }
@@ -566,93 +571,6 @@ textarea {
   .content--home .h2 {
     font-weight: normal;
     letter-spacing: 8px; }
-
-/*------------------------------------*\
-    COMMUNITIES PAGE
-\*------------------------------------*/
-.communities-list {
-  padding: 0 30px;
-  height: 100%; }
-
-.community-small {
-  max-width: 460px;
-  background-color: #F9E35F;
-  position: relative;
-  margin-bottom: 30px;
-  float: left;
-  box-shadow: 5px 5px 15px #ebebeb; }
-  @media (max-width: 1100px) {
-    .community-small {
-      max-width: 48%;
-      width: 48%; } }
-  @media (max-width: 900px) {
-    .community-small {
-      max-width: 100%;
-      width: 90%;
-      float: none;
-      margin: 0 auto 30px; } }
-  @media (max-width: 750px) {
-    .community-small {
-      max-width: 100%;
-      float: none;
-      margin: 0 auto 30px; } }
-  @media (max-width: 600px) {
-    .community-small {
-      max-width: 100%;
-      width: 100%;
-      float: none;
-      margin: 0 auto 30px; } }
-
-.community-small p {
-  padding: 30px 48px;
-  font-size: 17.51px;
-  font-size: 1.751rem;
-  line-height: 22px; }
-
-.community-small a {
-  display: block;
-  padding: 0px 0 40px 48px;
-  color: #707070;
-  font-size: 13.22px;
-  font-size: 1.322rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2px; }
-
-.community-image {
-  height: 300px;
-  position: relative;
-  color: white;
-  background-image: url(../img/lakenona.jpg);
-  background-size: cover; }
-  .community-image h2 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    font-weight: normal;
-    left: 0;
-    width: 100%;
-    margin: 10px 0 0 0;
-    padding: 0 30px; }
-    @media (max-width: 550px) {
-      .community-image h2 {
-        font-size: 36px;
-        font-size: 3.6rem; } }
-
-.community-small:nth-child(even) {
-  float: right; }
-  @media (max-width: 900px) {
-    .community-small:nth-child(even) {
-      float: none; } }
-
-.community-small:nth-child(2) {
-  float: right;
-  margin-top: 180px; }
-  @media (max-width: 900px) {
-    .community-small:nth-child(2) {
-      float: none;
-      margin-top: 0; } }
 
 /*------------------------------------*\
     COMMUNITY PAGE
@@ -984,7 +902,7 @@ textarea {
 .page-list--offset .page-item:nth-child(2) {
   float: right;
   margin-top: 180px; }
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
     .page-list--offset .page-item:nth-child(2) {
       float: none;
       margin-top: 0; } }

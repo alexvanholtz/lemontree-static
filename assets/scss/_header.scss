@@ -29,7 +29,7 @@
 
 
 .call {
-  @media (max-width: 1000px) {
+  @media (max-width: 768px) {
     display: none;
   }  
 }
@@ -116,7 +116,6 @@
 
 }
 
-
 .main-nav__trigger::after {
   content: "More";
   position: relative;
@@ -130,6 +129,9 @@
 
   @media (max-width: 1000px) {
     content: "Menu";
+  }
+
+  @media (max-width: 768px) {
     margin-right: 0;
 
   }  

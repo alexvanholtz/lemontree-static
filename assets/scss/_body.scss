@@ -36,7 +36,6 @@
   height: 570px;
   background-repeat: no-repeat;
   background-size: cover;
-  // background-attachment: fixed;
   background-position: center center;
 
   h1 {
@@ -60,16 +59,20 @@
     height: 500px;
   }  
 
-  @media (max-width: 900px) {
-    background-attachment: scroll;    
-  }
-
   @media (max-width: 768px) {
     height: 350px;
   }
 
   @media (max-width: 550px) {
     height: 250px;
+  }  
+}
+
+.hero--parallax {
+  background-attachment: fixed;  
+  
+  @media (max-width: 769px) {
+    background-attachment: scroll;    
   }  
 }
 
@@ -157,113 +160,6 @@
     letter-spacing: 8px;
   }
 }
-
-
-/*------------------------------------*\
-    COMMUNITIES PAGE
-\*------------------------------------*/
-.communities-list {
-  padding: 0 30px;
-  height: 100%;
-
-  @media (max-width: 900px){
-    // padding: 0;
-  }
-}
-
-.community-small {
-  max-width: 460px;
-  background-color: $yellow-primary;
-  position: relative;
-  margin-bottom: 30px;
-  float: left;
-  box-shadow: 5px 5px 15px #ebebeb;
-  
-  @media (max-width: 1100px){
-    max-width: 48%;
-    width: 48%;
-  }
-
-  @media (max-width: 900px){
-    max-width: 100%;
-    width: 90%;
-    float: none;
-    margin: 0 auto 30px;
-  }
-
-  @media (max-width: 750px){
-    max-width: 100%;
-    float: none;
-    margin: 0 auto 30px;
-  }
-
-  @media (max-width: 600px){
-    max-width: 100%;
-    width: 100%;    
-    float: none;
-    margin: 0 auto 30px;
-  }
-}
-
-.community-small p {
-  padding: 30px 48px;
-  @include font-size(1.751);
-  line-height: 22px;
-}
-
-.community-small a {
-  display: block;
-  padding: 0px 0 40px 48px; 
-  color: $gray-dark;
-  @include font-size(1.322);
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.community-image {
-  height: 300px;
-  position: relative;
-  color: white;
-  background-image: url(../img/lakenona.jpg);
-  background-size: cover;
-
-  h2 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    font-weight: normal;
-    left: 0;
-    width: 100%;
-    margin: 10px 0 0 0;
-    padding: 0 30px;
-
-    @media (max-width: 550px) {
-      @include font-size(3.6)
-    }
-  }
-
-}
-
-.community-small:nth-child(even) {
-  float: right;
-  
-  @media (max-width: 900px){
-    float: none;
-  }  
-}
-
-.community-small:nth-child(2) {
-  float: right;
-  margin-top: 180px;  
-
-  @media (max-width: 900px){
-    float: none;
-    margin-top: 0;
-  }    
-}
-
 
 /*------------------------------------*\
     COMMUNITY PAGE
@@ -666,7 +562,7 @@
     float: right;
     margin-top: 180px;  
 
-    @media (max-width: 900px){
+    @media (max-width: 768px){
       float: none;
       margin-top: 0;
     }    
