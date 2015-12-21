@@ -575,6 +575,14 @@ textarea {
     @media (max-width: 768px) {
       .content--home .h2 {
         padding: 0; } }
+  @media (max-width: 550px) {
+    .content--home .team-member-description .h2 {
+      margin-bottom: 0px; }
+    .content--home .team-member-description .h4 {
+      padding: 0px; } }
+  @media (max-width: 500px) {
+    .content--home .team-member-description .h4 {
+      padding: 10px 0; } }
 
 /*------------------------------------*\
     COMMUNITY PAGE
@@ -767,9 +775,9 @@ textarea {
   position: absolute;
   top: 50%;
   transform: translateY(-50%); }
-  .team-member-description h3,
-  .team-member-description--right h3,
-  .team-member-description--left h3 {
+  .team-member-description .h4,
+  .team-member-description--right .h4,
+  .team-member-description--left .h4 {
     font-weight: bold; }
   @media (max-width: 700px) {
     .team-member-description,
@@ -797,9 +805,9 @@ textarea {
     .team-member-description--right p,
     .team-member-description--left p {
       display: none; }
-    .team-member-description h3,
-    .team-member-description--right h3,
-    .team-member-description--left h3 {
+    .team-member-description .h4,
+    .team-member-description--right .h4,
+    .team-member-description--left .h4 {
       font-weight: bold;
       font-size: 18px;
       font-size: 1.8rem; } }
