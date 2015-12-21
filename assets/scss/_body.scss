@@ -103,7 +103,7 @@
   h1, h2 {
     text-align: center;
     margin: 0;
-    padding: 0 0 10px;
+    padding: 0 30px 10px 30px;
   }
   .container {
     height: 100%;
@@ -158,6 +158,11 @@
   .h2 {
     font-weight: normal;
     letter-spacing: 8px;
+    padding-left: 0;
+
+    @media (max-width: 768px){
+      padding: 0;
+    }
   }
 }
 
@@ -350,8 +355,18 @@
   background-size: cover;
   position: relative;
 
+  @media (max-width: 768px){
+    height: 400px;
+  }
+
+  @media (max-width: 550px) {
+    height: 300px;
+  }  
+
   .container{
     height: 100%;
+    max-width: 1084px;
+    padding: 0 30px; 
     position: relative;
   }
 }
@@ -363,10 +378,42 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);  
+
+    h3 {
+      font-weight: bold;
+    }
+
+  @media (max-width: 700px) {
+    max-width: 250px;
+
+    p {
+      @include font-size(1.4);
+      line-height: 20px;
+    }    
+  }  
+  @media (max-width: 600px) {
+    max-width: 225px;
+  }  
+  @media (max-width: 550px) {
+      max-width: 225px;
+  }
+  @media (max-width: 500px) {
+    p {
+      display: none;
+    }
+    h3 {
+      font-weight: bold;
+      @include font-size(1.8);
+    }
+  }  
 }
 
 .team-member-description--right {
-  right: 0;
+  right: 10px;
+  
+  @media (max-width: 500px) {
+    right: 30px;
+  } 
 }
 
 /*------------------------------------*\

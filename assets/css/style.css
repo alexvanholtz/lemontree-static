@@ -522,7 +522,7 @@ textarea {
   .content h1, .content h2 {
     text-align: center;
     margin: 0;
-    padding: 0 0 10px; }
+    padding: 0 30px 10px 30px; }
   .content .container {
     height: 100%; }
 
@@ -570,7 +570,11 @@ textarea {
   background-position: 50% 300px; }
   .content--home .h2 {
     font-weight: normal;
-    letter-spacing: 8px; }
+    letter-spacing: 8px;
+    padding-left: 0; }
+    @media (max-width: 768px) {
+      .content--home .h2 {
+        padding: 0; } }
 
 /*------------------------------------*\
     COMMUNITY PAGE
@@ -744,8 +748,16 @@ textarea {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative; }
+  @media (max-width: 768px) {
+    .team-member {
+      height: 400px; } }
+  @media (max-width: 550px) {
+    .team-member {
+      height: 300px; } }
   .team-member .container {
     height: 100%;
+    max-width: 1084px;
+    padding: 0 30px;
     position: relative; }
 
 .team-member-description,
@@ -755,9 +767,48 @@ textarea {
   position: absolute;
   top: 50%;
   transform: translateY(-50%); }
+  .team-member-description h3,
+  .team-member-description--right h3,
+  .team-member-description--left h3 {
+    font-weight: bold; }
+  @media (max-width: 700px) {
+    .team-member-description,
+    .team-member-description--right,
+    .team-member-description--left {
+      max-width: 250px; }
+      .team-member-description p,
+      .team-member-description--right p,
+      .team-member-description--left p {
+        font-size: 14px;
+        font-size: 1.4rem;
+        line-height: 20px; } }
+  @media (max-width: 600px) {
+    .team-member-description,
+    .team-member-description--right,
+    .team-member-description--left {
+      max-width: 225px; } }
+  @media (max-width: 550px) {
+    .team-member-description,
+    .team-member-description--right,
+    .team-member-description--left {
+      max-width: 225px; } }
+  @media (max-width: 500px) {
+    .team-member-description p,
+    .team-member-description--right p,
+    .team-member-description--left p {
+      display: none; }
+    .team-member-description h3,
+    .team-member-description--right h3,
+    .team-member-description--left h3 {
+      font-weight: bold;
+      font-size: 18px;
+      font-size: 1.8rem; } }
 
 .team-member-description--right {
-  right: 0; }
+  right: 10px; }
+  @media (max-width: 500px) {
+    .team-member-description--right {
+      right: 30px; } }
 
 /*------------------------------------*\
     CONTACT PAGE
