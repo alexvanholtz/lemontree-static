@@ -43,29 +43,22 @@
     letter-spacing: 4.5px;
     color: #fff;
     text-align: center;
-    padding-top: 80px;
+    padding: 80px 30px 0 30px;
     margin-top: 0;
-  }
 
-  // @media (min-width: 1200px) {
-  //   height: 600px;
-  // }  
-  
-  // @media (min-width: 1300px) {
-  //  height: 700px;
-  // }    
+    @media (max-width: 550px) {
+      @include font-size(2.4);  
+    }       
+  }   
 
   @media (max-width: 1100px) {
     height: 500px;
   }  
 
   @media (max-width: 768px) {
-    height: 350px;
-  }
+    height: 400px;
+  } 
 
-  @media (max-width: 550px) {
-    height: 250px;
-  }  
 }
 
 .hero--parallax {
@@ -557,8 +550,9 @@
   h2 {
     font-weight: normal;
     text-align: left; 
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-left: 0;
   }
 
   h3{
@@ -597,18 +591,16 @@
   float: right;
   margin-right: 30px;
 
-  img {
-    max-width: 120px;
-  }
-
   @media (max-width: 768px) {
     float: none;
     width: 100%;
-    margin: 40px auto 0;
+    margin: 50px auto 0;
   }
-
 }
 
+.post-sidebar img {
+  max-width: 120px;
+}
 
 /*------------------------------------*\
     PAGE LIST
