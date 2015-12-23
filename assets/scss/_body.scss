@@ -270,7 +270,16 @@
   @media (max-width: 550px) {
     @include font-size(3.2);
   }
+
+  &.statistic--small {
+
+      @include font-size(2.8); 
+      line-height: 38px;
+
+  }  
 }
+
+
 
 .community-description {
   background-color: $white;

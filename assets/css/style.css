@@ -679,6 +679,10 @@ textarea {
     .statistic span {
       font-size: 32px;
       font-size: 3.2rem; } }
+  .statistic span.statistic--small {
+    font-size: 28px;
+    font-size: 2.8rem;
+    line-height: 38px; }
 
 .community-description {
   background-color: #fff;
