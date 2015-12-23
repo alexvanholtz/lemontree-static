@@ -24,10 +24,12 @@
     e.preventDefault();
     currentScroll = $(document).scrollTop();
 
+    $(document).scrollTop(0);    
     $('.fs-menu').show(); 
     $('.wrapper').hide(); 
     $('body').addClass('yellow');
     $('body').addClass('menu-is-open');
+    
   });  
 
   $('.js-trigger-fs-menu-close').on('click', function(e){
