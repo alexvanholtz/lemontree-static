@@ -49,6 +49,7 @@
 
   a {
     @include font-size(1.4);
+    letter-spacing: 1.63 !important;
     text-transform: uppercase;
     text-decoration: none;
     color: $gray-dark;

@@ -11,6 +11,7 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
   color: #707070; }
 
 *, *:before, *:after {
@@ -278,6 +279,7 @@ textarea {
   .main-nav__item a {
     font-size: 14px;
     font-size: 1.4rem;
+    letter-spacing: 1.63 !important;
     text-transform: uppercase;
     text-decoration: none;
     color: #707070;
@@ -468,7 +470,10 @@ textarea {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    line-height: 1; }
+    line-height: 1;
+    letter-spacing: 2px;
+    font-size: 13.22px;
+    font-size: 1.322rem; }
   @media (max-width: 767px) {
     .cta-bar {
       display: none; } }
@@ -508,7 +513,8 @@ textarea {
       background-attachment: scroll; } }
 
 .hero--home h1 {
-  padding-top: 115px; }
+  padding-top: 115px;
+  text-shadow: 1px 1px 0px #7B7B7B; }
 
 .hero--large-heading h1 {
   font-size: 48px;
