@@ -6,7 +6,6 @@
   padding-top: 60px;
 }
 
-
 /*------------------------------------*\
     CTA Bar
 \*------------------------------------*/
@@ -180,6 +179,158 @@
 }
 
 /*------------------------------------*\
+    HOME PAGE
+\*------------------------------------*/
+
+.featured-post {
+  height: 550px;
+  margin-bottom: -50px;
+  position: relative;
+
+  @media (max-width: 770px) {
+    margin-bottom: 0;
+    height: 560px;
+  }   
+
+  @media (max-width: 550px) {
+    height: auto;
+  }
+}
+
+.featured-post-image {
+  width: 410px;
+  height: 450px;
+  float: left;
+  margin-top: 50px;
+  margin-left: 102px;
+  background-size: cover;
+  background-position: center center;
+
+  @media (max-width: 1024px) {
+    margin-left: 0px;
+    width: 55%;
+  }
+
+  @media (max-width: 770px) {
+    width: 45%;
+    background-repeat: no-repeat;
+    margin-top: 60px;
+    margin-top: 110px;
+  }  
+
+  @media (max-width: 550px) {
+    float: none;
+    width: 100%;
+    position: relative;
+    margin-top: 0;
+    height: 300px;
+  }
+
+}
+
+.featured-post-text {
+  padding: 50px;
+  position: absolute;
+  max-height: 560px;
+  width: 50%;
+  height: 560px;
+  background-color: $white;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  right: 0;
+  z-index: 999;
+
+  p {
+    max-width: 320px;
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: 1024px) {
+    width: 45%;
+  }
+
+  @media (max-width: 770px) {
+    width: 55%;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 550px) {
+    width: 100%;
+    position: relative;
+    height: auto;
+
+    p {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.contact {
+  position: relative;
+  min-height: 560px;
+  margin-bottom: 50px;
+}
+
+.contact-tree {
+  float: left;
+  max-height: 560px;
+  width: 50%;
+  height: 560px;
+  background-color: $yellow-primary;
+  background-image: url('../img/svg/tree-leaves.svg');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  margin-top: -50px;
+  left: 0;
+
+  @media (max-width: 770px) {
+    width: 50%;
+    margin-top: 0;
+    background-size: contain;
+  }
+
+  @media (max-width: 550px) {
+    width: 100%;
+    height: 250px;
+    background-size: 40%;
+    background-position: center center;
+  }
+
+  @media (max-width: 450px) {
+    background-size: 50%;
+  }
+}
+
+
+.contact-info--home {
+  float: left !important;
+  margin-left: 50px;
+  margin-top: 50px;
+
+  .email {
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: 770px) {
+    max-width: 200px;
+    text-align: left !important;
+  }
+
+  @media (max-width: 550px) {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    text-align: center !important;
+    margin-bottom: 50px;
+    
+    .email {
+      margin-bottom: 30px;      
+    }
+  }
+}
+
+/*------------------------------------*\
     COMMUNITY PAGE
 \*------------------------------------*/
 .community {
@@ -199,7 +350,6 @@
     @media (max-width: 550px) {
      padding-top: 80px; 
     }
-
   }
 }
 
@@ -275,14 +425,10 @@
   }
 
   &.statistic--small {
-
-      @include font-size(2.8); 
-      line-height: 38px;
-
+    @include font-size(2.8); 
+    line-height: 38px;
   }  
 }
-
-
 
 .community-description {
   background-color: $white;
@@ -376,7 +522,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-
   @media (max-width: 768px){
     height: 400px;
   }
@@ -406,20 +551,6 @@
     }
 
   @media (max-width: 700px) {
-    max-width: 250px;
-
-    p {
-      @include font-size(1.4);
-      line-height: 20px;
-    }    
-  }  
-  @media (max-width: 600px) {
-    max-width: 225px;
-  }  
-  @media (max-width: 550px) {
-      max-width: 225px;
-  }
-  @media (max-width: 500px) {
     p {
       display: none;
     }
