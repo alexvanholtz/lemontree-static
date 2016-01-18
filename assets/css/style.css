@@ -11,7 +11,6 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
   color: #707070; }
 
 *, *:before, *:after {
@@ -492,7 +491,9 @@ textarea {
   height: 570px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center; }
+  background-position: center center;
+  position: relative;
+  text-align: center; }
   .hero h1 {
     font-size: 36px;
     font-size: 3.6rem;
@@ -511,6 +512,17 @@ textarea {
   @media (max-width: 768px) {
     .hero {
       height: 400px; } }
+
+.hero--large {
+  height: 670px; }
+
+.hero--small {
+  height: 476; }
+
+.hero-headline--middle {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
 
 .hero--parallax {
   background-attachment: fixed; }
@@ -917,34 +929,35 @@ textarea {
     padding: 0 30px;
     position: relative; }
 
-.team-member-description,
-.team-member-description--right,
-.team-member-description--left {
-  max-width: 320px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%); }
-  .team-member-description .h4,
-  .team-member-description--right .h4,
-  .team-member-description--left .h4 {
+.team-member-description {
+  max-width: 320px; }
+  .team-member-description .h4 {
     font-weight: bold; }
   @media (max-width: 700px) {
-    .team-member-description p,
-    .team-member-description--right p,
-    .team-member-description--left p {
+    .team-member-description p {
       display: none; }
-    .team-member-description .h4,
-    .team-member-description--right .h4,
-    .team-member-description--left .h4 {
+    .team-member-description .h4 {
       font-weight: bold;
       font-size: 18px;
       font-size: 1.8rem; } }
+
+.team-description--home {
+  padding: 50px 0; }
+
+.team-member-description--right,
+.team-member-description--left {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
 
 .team-member-description--right {
   right: 10px; }
   @media (max-width: 500px) {
     .team-member-description--right {
       right: 30px; } }
+
+.team-description {
+  max-width: 320px; }
 
 /*------------------------------------*\
     CONTACT PAGE
@@ -1170,6 +1183,40 @@ textarea {
   letter-spacing: 2px;
   position: absolute;
   bottom: 30px; }
+
+/*------------------------------------*\
+    JOIN
+\*------------------------------------*/
+.proposition {
+  width: 32%;
+  float: left;
+  padding-right: 1%;
+  text-align: center;
+  padding: 15px; }
+  .proposition img {
+    max-width: 200px; }
+  .proposition p {
+    font-size: 14.81px;
+    font-size: 1.481rem; }
+  @media (max-width: 768px) {
+    .proposition {
+      width: 100%; }
+      .proposition p {
+        max-width: 400px;
+        text-align: center;
+        margin: 0 auto; } }
+
+.proposition:nth-of-type(3n + 2) {
+  margin-right: 2%; }
+  @media (max-width: 768px) {
+    .proposition:nth-of-type(3n + 2) {
+      margin: 0; } }
+
+.proposition:nth-of-type(3n+1) {
+  margin-left: 2%; }
+  @media (max-width: 768px) {
+    .proposition:nth-of-type(3n+1) {
+      margin: 0; } }
 
 footer {
   margin: 60px 0 25px 0;
