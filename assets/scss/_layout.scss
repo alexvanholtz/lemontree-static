@@ -116,11 +116,15 @@ a {
 }
 
 .padding--50-top {
-  padding-top: 50 !important;
+  padding-top: 50px !important;
 }
 
 .padding--no-bottom {
   padding-bottom: 0 !important;
+}
+
+.padding--50-bottom {
+  padding-bottom: 50px !important;
 }
 
 .margin--no-top {
@@ -128,7 +132,7 @@ a {
 }
 
 .margin--50-top {
-  margin-top: 50 !important;
+  margin-top: 50px !important;
 }
 
 .margin--no-bottom {
