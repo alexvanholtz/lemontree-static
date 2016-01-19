@@ -228,6 +228,11 @@
   background-position: 0% 0%;
 }
 
+.content--bg-single-leaf {
+  background-image: url(../img/svg/leaves-branch.svg);
+  background-position: 40% 0%;
+}
+
 .content--no-bg {
   background-image: none;
 }
@@ -564,14 +569,22 @@
   padding: 30px 0;
   margin-top: 200px;
   clear: both;
+  text-align: center;
 
   @media (max-width: 767px) {
     margin-top: 0;
   }
 }
 
+.community-neighborhoods--neighborhood {
+  margin-top: 0;
+  padding: 40px 0;
+}
+
 .community-neighborhoods h3 {
   text-align: center;
+  @include font-size(2.4);
+  margin: 40px 30px 50px;
 }
 
 .community-neighborhoods ul {
@@ -579,6 +592,7 @@
   list-style: none;
   margin-top: 30px;
   padding: 0 30px;
+  text-align: left;
 
   -webkit-column-count: 3; /* Chrome, Safari, Opera */
   -moz-column-count: 3; /* Firefox */
@@ -614,6 +628,147 @@
     }
   }
 }
+
+/*------------------------------------*\
+    NEIGHBORHOOD PAGE
+\*------------------------------------*/
+.neighborhood {
+  margin: 0 auto;
+  max-width: 920px;
+  background-color: $white;
+  padding: 30px 50px 80px;
+  position: relative;
+  min-height: 775px;
+  margin-top: 30px;
+
+  @media (max-width: 990px){
+    padding: 30px 50px 50px;
+    height: auto;
+  }
+
+}
+
+.neighborhood-description {
+  max-width: 535px;
+  width: 535px;
+  float: none;
+  margin-top: -80px;
+  margin-left: 280px;
+
+  h2 {
+    text-align: left;
+    padding-left: 0;
+    padding-bottom: 50px;
+    // line-height: 28px;
+
+    @media (max-width: 650px){
+      @include font-size(2.0);
+    }
+    @media (max-width: 450px){
+      @include font-size(1.6);
+      line-height: 1.2;
+
+    }
+  }
+
+  h3 {
+    padding: 5px 0;
+  }
+
+  table {
+    width: 100%;
+    margin: 40px 0 50px;
+    @include font-size(1.8);
+
+    .tr-header {
+      width: 150px;
+    }
+
+    tr {
+      border-bottom: 1px solid $gray-medium;
+      margin: 20px 0;
+    }
+  }
+
+  @media (max-width: 990px){
+    margin-left: 0;
+    margin-top: -80px;
+    width: 100%;
+    max-width: 100%;
+    float: none;
+  }
+
+}
+
+.neighborhood-sidebar {
+  width: 300px;
+  // float: left;
+  // margin-left: -62px;
+  // margin-top: -110px;
+  position: absolute;
+  top: -50px;
+  left: -22px;
+
+  img {
+    float: left;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media (max-width: 990px){
+    position: static;
+    margin: 0;
+    width: 100%;
+    float: left;
+    margin-top: 80px;
+    // margin-bottom: 20px;
+    padding: 50px 0;
+
+    img:nth-of-type(3n + 2) {
+      margin-right: 2%;
+    }
+
+    img:nth-of-type(3n + 1) {
+      margin-right: 2%;
+    }
+
+    img {
+      width: 32%;
+    }
+
+  }
+
+  @media (max-width: 768px){
+    
+    // margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+
+    img {
+      width: 100%;
+      max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    float: none;
+
+    }
+    img:nth-of-type(3n + 2) {
+      margin-bottom: 50px;
+      margin-right: 0;
+    }
+    img:nth-of-type(3n + 1) {
+      margin-bottom: 50px;
+      margin-right: 0;
+    }
+
+
+  }
+
+
+}
+
 
 /*------------------------------------*\
     TEAM PAGE
@@ -879,6 +1034,8 @@
     }    
   }
 }
+
+
 
 .page-item {
   width: 48%;

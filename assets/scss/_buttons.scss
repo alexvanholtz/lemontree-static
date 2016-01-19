@@ -2,17 +2,23 @@
   display: inline-block;
   background-color: $yellow-secondary;
   border: 2px solid $yellow-secondary;  
-  padding: 15px 60px 11px;
+  padding: 15px 50px 11px;
   border-radius: 8px;
   text-transform: uppercase;
   text-decoration: none;
   color: $gray-dark;
   letter-spacing: 1px;
   transition: 0.2s all;
+  @include font-size(1.4);
 
   &:hover {
     background-color: transparent;
     border-color: $gray-dark;
+  }
+
+  @media (max-width: 500px){
+    padding: 15px 20px 11px;
+
   }
 }
 

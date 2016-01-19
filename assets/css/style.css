@@ -135,16 +135,21 @@ a {
   display: inline-block;
   background-color: #FEDE59;
   border: 2px solid #FEDE59;
-  padding: 15px 60px 11px;
+  padding: 15px 50px 11px;
   border-radius: 8px;
   text-transform: uppercase;
   text-decoration: none;
   color: #707070;
   letter-spacing: 1px;
-  transition: 0.2s all; }
+  transition: 0.2s all;
+  font-size: 14px;
+  font-size: 1.4rem; }
   .btn:hover {
     background-color: transparent;
     border-color: #707070; }
+  @media (max-width: 500px) {
+    .btn {
+      padding: 15px 20px 11px; } }
 
 .btn--outlined {
   border: 2px solid #707070;
@@ -646,6 +651,10 @@ textarea {
   background-image: url("../img/svg/leaves-left.svg");
   background-position: 0% 0%; }
 
+.content--bg-single-leaf {
+  background-image: url(../img/svg/leaves-branch.svg);
+  background-position: 40% 0%; }
+
 .content--no-bg {
   background-image: none; }
 
@@ -923,19 +932,28 @@ textarea {
   background-color: #F2F2F2;
   padding: 30px 0;
   margin-top: 200px;
-  clear: both; }
+  clear: both;
+  text-align: center; }
   @media (max-width: 767px) {
     .community-neighborhoods {
       margin-top: 0; } }
 
+.community-neighborhoods--neighborhood {
+  margin-top: 0;
+  padding: 40px 0; }
+
 .community-neighborhoods h3 {
-  text-align: center; }
+  text-align: center;
+  font-size: 24px;
+  font-size: 2.4rem;
+  margin: 40px 30px 50px; }
 
 .community-neighborhoods ul {
   font-weight: bold;
   list-style: none;
   margin-top: 30px;
   padding: 0 30px;
+  text-align: left;
   -webkit-column-count: 3;
   /* Chrome, Safari, Opera */
   -moz-column-count: 3;
@@ -968,6 +986,102 @@ textarea {
     .community-neighborhoods li a:hover:after {
       content: url(../img/svg/arrow.svg);
       margin-left: 10px; }
+
+/*------------------------------------*\
+    NEIGHBORHOOD PAGE
+\*------------------------------------*/
+.neighborhood {
+  margin: 0 auto;
+  max-width: 920px;
+  background-color: #fff;
+  padding: 30px 50px 80px;
+  position: relative;
+  min-height: 775px;
+  margin-top: 30px; }
+  @media (max-width: 990px) {
+    .neighborhood {
+      padding: 30px 50px 50px;
+      height: auto; } }
+
+.neighborhood-description {
+  max-width: 535px;
+  width: 535px;
+  float: none;
+  margin-top: -80px;
+  margin-left: 280px; }
+  .neighborhood-description h2 {
+    text-align: left;
+    padding-left: 0;
+    padding-bottom: 50px; }
+    @media (max-width: 650px) {
+      .neighborhood-description h2 {
+        font-size: 20px;
+        font-size: 2rem; } }
+    @media (max-width: 450px) {
+      .neighborhood-description h2 {
+        font-size: 16px;
+        font-size: 1.6rem;
+        line-height: 1.2; } }
+  .neighborhood-description h3 {
+    padding: 5px 0; }
+  .neighborhood-description table {
+    width: 100%;
+    margin: 40px 0 50px;
+    font-size: 18px;
+    font-size: 1.8rem; }
+    .neighborhood-description table .tr-header {
+      width: 150px; }
+    .neighborhood-description table tr {
+      border-bottom: 1px solid #7B7B7B;
+      margin: 20px 0; }
+  @media (max-width: 990px) {
+    .neighborhood-description {
+      margin-left: 0;
+      margin-top: -80px;
+      width: 100%;
+      max-width: 100%;
+      float: none; } }
+
+.neighborhood-sidebar {
+  width: 300px;
+  position: absolute;
+  top: -50px;
+  left: -22px; }
+  .neighborhood-sidebar img {
+    float: left;
+    padding: 0;
+    margin: 0; }
+  @media (max-width: 990px) {
+    .neighborhood-sidebar {
+      position: static;
+      margin: 0;
+      width: 100%;
+      float: left;
+      margin-top: 80px;
+      padding: 50px 0; }
+      .neighborhood-sidebar img:nth-of-type(3n + 2) {
+        margin-right: 2%; }
+      .neighborhood-sidebar img:nth-of-type(3n + 1) {
+        margin-right: 2%; }
+      .neighborhood-sidebar img {
+        width: 32%; } }
+  @media (max-width: 768px) {
+    .neighborhood-sidebar {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center; }
+      .neighborhood-sidebar img {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: center;
+        float: none; }
+      .neighborhood-sidebar img:nth-of-type(3n + 2) {
+        margin-bottom: 50px;
+        margin-right: 0; }
+      .neighborhood-sidebar img:nth-of-type(3n + 1) {
+        margin-bottom: 50px;
+        margin-right: 0; } }
 
 /*------------------------------------*\
     TEAM PAGE
