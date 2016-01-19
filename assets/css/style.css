@@ -1149,7 +1149,9 @@ textarea {
   max-width: 472px;
   float: left;
   border: 10px solid #fff;
-  margin-top: -220px; }
+  margin-top: -220px;
+  z-index: 99999;
+  position: relative; }
   @media (max-width: 768px) {
     .map {
       float: none;

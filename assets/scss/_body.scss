@@ -853,6 +853,8 @@
   float: left;
   border: 10px solid $white;
   margin-top: -220px;
+  z-index: 99999;
+  position: relative;
 
   @media (max-width: 768px) {
     float: none;
